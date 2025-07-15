@@ -1,0 +1,44 @@
+# Supermarket Management System - Requirements
+
+1. Java Development Kit (JDK)
+   - Version: Java 11 or later
+   - Download: https://www.oracle.com/java/technologies/javase-downloads.html
+
+2. IntelliJ IDEA / Eclipse (Recommended IDEs)
+
+3. MySQL Server
+   - Version: MySQL 8.x or compatible
+   - GUI Tool: MySQL Workbench or phpMyAdmin (optional)
+
+4. MySQL JDBC Driver
+   - Connector/J: mysql-connector-java-8.0.x.jar
+   - Add to Project Libraries: File > Project Structure > Libraries
+
+5. Database Configuration
+   - Database Name: supermarket
+   - Required Tables:
+     • users (id, name, email, password)
+     • products (id, name, quantity, price)
+     • billing (id, product_id, quantity, total_price, datetime)
+
+6. Java Swing
+   - For GUI development (no external libraries needed)
+
+7. PNG icons
+   - home.png
+   - cart.png
+   - billing.png
+   - logout.png
+   - All located in: src/icons/
+
+8. Fonts and Styling (optional)
+   - Font: Segoe UI or similar
+   - Color Palette: #0A1128, #001F54, #034078, #1282A2, #FEFCFB
+
+9. README.md
+   - Contains setup instructions and demo link
+
+10. System Requirements
+   - OS: Windows/Linux/macOS
+   - RAM: Minimum 4GB
+   - Java and MySQL environment setup
