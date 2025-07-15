@@ -29,6 +29,7 @@ src/
 - MySQL for backend database
 - IntelliJ IDEA (Recommended IDE)
 
+<img width="1916" height="1138" alt="image" src="https://github.com/user-attachments/assets/c37a6397-ad4e-4b80-9eb4-ea89ed4de878" />
 
 ## 🛠️ Setup Instructions
 
