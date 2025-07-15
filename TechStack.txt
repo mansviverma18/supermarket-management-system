@@ -1,0 +1,33 @@
+# Supermarket Management System - Tech Stack
+
+📌 Programming Language:
+   • Java (Java 11+)
+
+📌 GUI Framework:
+   • Java Swing
+
+📌 Database:
+   • MySQL
+   • JDBC Connector (MySQL Connector/J)
+
+📌 Development Tools:
+   • IntelliJ IDEA / Eclipse
+   • MySQL Workbench
+
+📌 Version Control:
+   • Git & GitHub
+
+📌 Project Structure:
+   • MVC Pattern (Model-View-Controller)
+   • DAO Layer (Data Access Object)
+
+📌 Design:
+   • Custom Dark Theme UI
+   • PNG Icons for Sidebar Navigation
+   • Hover Animations on Buttons
+   • Responsive Layout with GridBagLayout and BorderLayout
+
+📌 Other:
+   • README.md with demo video link
+   • .gitignore and IML configuration
+   • MySQL Database schema included in README
