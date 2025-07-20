@@ -45,36 +45,43 @@ git clone https://github.com/mansviverma18/supermarket-management-system.git
 4. Create a database named `supermarket` and import the required tables
 
 ```sql
--- Create the database
 CREATE DATABASE IF NOT EXISTS supermarket;
 USE supermarket;
 
--- Create table for users
 CREATE TABLE IF NOT EXISTS users (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100),
-    email VARCHAR(100) UNIQUE,
-    password VARCHAR(100)
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL
 );
 
--- Insert sample user
-INSERT INTO users (name, email, password) VALUES
-('Admin', 'admin@example.com', 'admin123');
-
--- Create table for products
 CREATE TABLE IF NOT EXISTS products (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100),
-    price DOUBLE
+    name VARCHAR(100) NOT NULL,
+    category VARCHAR(50),
+    quantity INT DEFAULT 0,
+    price DOUBLE NOT NULL
 );
 
--- Insert sample products
-INSERT INTO products (name, price) VALUES
-('Shampoo', 150),
-('Toothpaste', 75),
-('Rice', 60),
-('Biscuits', 25),
-('Oil', 120);
+CREATE TABLE IF NOT EXISTS sales (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    product_id INT,
+    quantity_sold INT,
+    total_price DOUBLE,
+    sale_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+INSERT INTO products (name, category, quantity, price) VALUES
+('Parle-G Biscuits', 'Snacks', 100, 5.00),
+('Dairy Milk Chocolate', 'Confectionery', 50, 30.00),
+('Dettol Soap', 'Personal Care', 80, 25.00),
+('Aashirvaad Atta', 'Grocery', 40, 200.00);
+
+INSERT INTO users (username, password)
+VALUES ('admin', 'admin123');  -- You can change this as needed
+
 ```
 
 5. Update your database credentials in the `DBConnection.java` file
