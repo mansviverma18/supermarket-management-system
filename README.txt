@@ -1,45 +1,54 @@
-# Supermarket Management System 🛒
+# 🛒 Supermarket Management System
 
-A full-featured desktop-based Supermarket Management System built using Java Swing and MySQL. Designed with an attractive UI and animations, it includes features like product management, billing, login/signup, and more.
+A full-featured desktop-based Supermarket Management System built using **Java Swing** and **MySQL**. Designed with an attractive UI and animations, it includes features like product management, billing, login/signup, and more.
 
-## 🚀 Features
+---
 
-- User login and signup system with MySQL integration
-- Product management: add, update, delete, and view products
-- Billing panel with live cart generation and total calculation
-- Interactive sidebar with icons and glowing animation on hover
-- Modern dark UI using a professional color palette (#0A1128, #001F54, #034078, #1282A2, #FEFCFB)
-- Organized using MVC structure: models, dao, ui packages
+## 🚀 Key Features
+
+- **User Authentication:** Secure login and signup system with MySQL integration for credential storage and verification.
+- **Product Management:** Add, update, delete, and view products through a live-updating table backed directly by the database.
+- **Billing Panel:** Live receipt generation — add products to a running bill, see the total calculate in real time, and export the receipt as a PNG image.
+- **Interactive Sidebar:** Icon-based navigation with a glowing hover animation for a polished, modern feel.
+- **Modern Dark UI:** Custom color palette (`#0A1128`, `#001F54`, `#034078`, `#1282A2`, `#FEFCFB`) applied consistently across every screen.
+- **Clean Architecture:** Organized using an MVC-style structure — separate `models`, `dao`, and `ui` packages for maintainability.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** Java 11
+- **GUI Framework:** Java Swing
+- **Database:** MySQL
+- **DB Access:** JDBC (raw SQL via `PreparedStatement`, no ORM)
+- **IDE:** IntelliJ IDEA (Recommended)
+
+---
 
 ## 📂 Project Structure
 
-  src/
+src/
 ├── dao/ # Database Access Objects (UserDAO, ProductDAO)
 ├── db/ # DBConnection file for MySQL
 ├── icons/ # PNG icons used in the UI (home, billing, logout, etc.)
 ├── models/ # Product and User classes
 └── ui/ # All user interface screens and windows
 
-  
-## 🧑‍💻 Technologies Used
 
-- Java 11
-- Swing for GUI
-- MySQL for backend database
-- IntelliJ IDEA (Recommended IDE)
+---
 
-## 🛠️ Setup Instructions
+## ⚡ Setup Instructions
 
-1. Clone this repository
+1. **Clone this repository**
 ```bash
 git clone https://github.com/mansviverma18/supermarket-management-system.git
 ```
 
-2. Open the project in IntelliJ IDEA or any Java IDE
+2. **Open the project** in IntelliJ IDEA or any Java IDE
 
-3. Make sure MySQL is installed and running
+3. **Make sure MySQL is installed and running**
 
-4. Create a database named `supermarket` and import the required tables
+4. **Create a database** named `supermarket` and import the required tables:
 
 ```sql
 CREATE DATABASE IF NOT EXISTS supermarket;
@@ -78,16 +87,17 @@ INSERT INTO products (name, category, quantity, price) VALUES
 
 INSERT INTO users (username, password)
 VALUES ('admin', 'admin123');  -- You can change this as needed
-
 ```
 
-5. Update your database credentials in the `DBConnection.java` file
+5. **Update your database credentials** in the `DBConnection.java` file
 
-6. Run the application from `MainWindow.java`
+6. **Run the application** from `MainWindow.java`
+
+---
 
 ## 🙋‍♀️ Author
 
-Made with ❤️ by Mansvi Verma  
+Made with ❤️ by **Mansvi Verma**
 📧 Email: mansviverma1881@gmail.com
 
 If you like this project, consider giving it a ⭐ on GitHub!
